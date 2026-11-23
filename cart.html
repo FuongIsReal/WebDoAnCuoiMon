@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng - ModaShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-main container">
+      <a href="index.html" class="logo">ModaShop <span class="page-name">| Giỏ hàng</span></a>
+
+      <form class="search-box" id="searchForm">
+        <input type="text" id="searchInput" placeholder="Tìm áo, quần, giày, túi xách...">
+        <button type="submit">Tìm kiếm</button>
+      </form>
+
+      <a href="cart.html" class="cart">Giỏ hàng <span class="cart-count" id="cartCount">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Tiêu đề các cột -->
+    <div class="cart-header">
+      <div class="cart-product">Sản phẩm</div>
+      <div class="cart-unit">Đơn giá</div>
+      <div class="qty-box-title">Số lượng</div>
+      <div class="cart-line-total">Số tiền</div>
+      <div class="remove-title">Thao tác</div>
+    </div>
+
+    <!-- Danh sách sản phẩm trong giỏ (tạo bằng script.js) -->
+    <section class="cart-list" id="cartList"></section>
+
+    <!-- Tổng tiền + nút mua -->
+    <section class="cart-summary" id="cartSummary">
+      <a href="index.html" class="continue-link">← Tiếp tục mua sắm</a>
+      <div class="summary-right">
+        <span>Tổng thanh toán (<b id="totalQty">0</b> sản phẩm):</span>
+        <span class="summary-price" id="totalPrice">₫0</span>
+        <button class="btn-main" onclick="checkout()">Mua hàng</button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

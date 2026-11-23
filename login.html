@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập - ModaShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <!-- Header đơn giản -->
+  <header class="auth-header">
+    <div class="container auth-header-inner">
+      <a href="index.html" class="auth-logo">ModaShop</a>
+      <span class="auth-page-title">Đăng nhập</span>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="container auth-wrap">
+
+      <!-- Bên trái: giới thiệu -->
+      <div class="auth-intro">
+        <h1>ModaShop</h1>
+        <p>Thời trang giá tốt mỗi ngày</p>
+      </div>
+
+      <!-- Bên phải: form đăng nhập -->
+      <form class="auth-box" id="loginForm" novalidate>
+        <h2>Đăng nhập</h2>
+
+        <div class="form-group">
+          <input type="text" id="loginAccount" placeholder="Email hoặc số điện thoại">
+          <p class="field-error" id="loginAccountError"></p>
+        </div>
+
+        <div class="form-group">
+          <div class="password-box">
+            <input type="password" id="loginPassword" placeholder="Mật khẩu">
+            <button type="button" class="toggle-pass" data-target="loginPassword">Hiện</button>
+          </div>
+          <p class="field-error" id="loginPasswordError"></p>
+        </div>
+
+        <p class="form-error" id="loginError"></p>
+
+        <button type="submit" class="btn-main auth-submit">ĐĂNG NHẬP</button>
+
+        <div class="auth-extra">
+          <a href="#" onclick="alert('Chức năng đang phát triển'); return false;">Quên mật khẩu</a>
+        </div>
+
+        <p class="auth-switch">
+          Bạn mới biết đến ModaShop? <a href="register.html">Đăng ký</a>
+        </p>
+      </form>
+
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
